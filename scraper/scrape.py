@@ -21,4 +21,29 @@ if __name__ == "__main__":
     with open("chapter1.txt", "w", encoding='utf-8') as f:
         f.write(text)
     print("Chapter content and screenshot saved.")
-    
+
+# scraper/scrape.py
+# import os
+# from playwright.sync_api import sync_playwright
+# import time
+
+# # Create folders if they don't exist
+# os.makedirs("output/screenshots", exist_ok=True)
+# os.makedirs("output/chapters", exist_ok=True)
+
+# def fetch_chapter_content(url, chapter_name="chapter1"):
+#     with sync_playwright() as p:
+#         browser = p.chromium.launch()
+#         page = browser.new_page()
+#         page.goto(url)
+        
+#         time.sleep(2)
+        
+#         content = page.inner_text("body")
+#         page.screenshot(path=f"output/screenshots/{chapter_name}.png", full_page=True)
+#         browser.close()
+
+#     with open(f"output/chapters/{chapter_name}.txt", "w", encoding='utf-8') as f:
+#         f.write(content)
+
+#     return content
