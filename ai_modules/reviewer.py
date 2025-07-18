@@ -1,6 +1,4 @@
 
-# from textstat import flesch_reading_ease
-
 
 from textstat import flesch_reading_ease
 
