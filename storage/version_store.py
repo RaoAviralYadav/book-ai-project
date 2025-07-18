@@ -5,7 +5,6 @@ from datetime import datetime
 VERSION_FILE = os.path.join(os.path.dirname(__file__), '..', 'storage', 'versions.json')
 
 def load_versions():
-    """Load saved versions from JSON file."""
     try:
         with open(VERSION_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -14,7 +13,6 @@ def load_versions():
 
 
 def save_version(text):
-    """Append a new version with timestamp to the versions file."""
     versions = load_versions()
     entry = {
         'timestamp': datetime.utcnow().isoformat() + 'Z',
@@ -24,4 +22,3 @@ def save_version(text):
     os.makedirs(os.path.dirname(VERSION_FILE), exist_ok=True)
     with open(VERSION_FILE, 'w', encoding='utf-8') as f:
         json.dump(versions, f, indent=2, ensure_ascii=False)
-
