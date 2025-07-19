@@ -18,10 +18,3 @@ def query_semantic_versions(query_text, n_results=5):
         n_results=n_results
     )
     return results
-
-# def query_semantic_versions(query_text, n_results=5):
-#     results = collection.query(
-#         query_text=query_text,
-#         n_results=n_results
-#     )
-#     return results
