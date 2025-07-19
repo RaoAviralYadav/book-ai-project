@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .env
+test_reward.py
 *.png
 *.txt
 *.db
